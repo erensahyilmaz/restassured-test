@@ -80,7 +80,7 @@ public void testGetPostById(){
         .statusCode(200)
         .contentType("application/json")
         .body("id", equalTo(1))
-        .body("userId", notNullValue())
+        .body("userId", equalTo(1))
         .body("title", not(emptyOrNullString()))
         .time(lessThan(2000L));  
     System.out.println("Yanıt süresi (GET): " + response.time() + " ms");     
