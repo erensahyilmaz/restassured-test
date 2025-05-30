@@ -82,7 +82,7 @@ public void testGetPostById(){
         .body("id", equalTo(1))
         .body("userId", notNullValue())
         .body("title", not(emptyOrNullString()))
-        .time(lessThan(2000L)); // 2 saniyenin altında mı?   
+        .time(lessThan(2000L));  
     System.out.println("Yanıt süresi (GET): " + response.time() + " ms");     
 }
 }
